@@ -1,68 +1,101 @@
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* FONDO GRADIENTE */
 body{
-    background:black;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #000);
     color:white;
+    text-align:center;
 }
 
 /* HEADER */
 header{
-    text-align:center;
     padding:30px;
-    border-bottom:2px solid orange;
+    font-size:22px;
+    letter-spacing:2px;
 }
 
-header h1{
-    color:orange;
-}
-
-/* NAV */
+/* NAV BOTONES */
 nav{
     display:flex;
     justify-content:center;
-    gap:15px;
-    padding:15px;
-    border-bottom:2px solid orange;
-    position:sticky;
-    top:0;
-    background:black;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:20px;
 }
 
-nav a{
-    text-decoration:none;
+/* BOTONES NUEVOS */
+button{
+    padding:12px 18px;
+    border:none;
+    border-radius:12px;
+    background: rgba(255,165,0,0.1);
     color:orange;
-    border:2px solid orange;
-    padding:10px;
-    border-radius:8px;
+    font-weight:bold;
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,165,0,0.4);
+    cursor:pointer;
     transition:0.3s;
 }
 
-nav a:hover{
+/* HOVER PRO */
+button:hover{
     background:orange;
     color:black;
-    box-shadow:0 0 10px orange;
+    box-shadow:0 0 20px orange;
+    transform:translateY(-2px) scale(1.05);
 }
 
-/* MAIN */
-main{
-    padding:20px;
+/* MODAL (FONDO) */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+    justify-content:center;
+    align-items:center;
+    animation: fadeIn 0.4s;
 }
 
-/* SECCIONES */
-section{
-    margin-bottom:30px;
+/* ANIMACIÓN */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
 }
 
-article{
-    border:2px solid orange;
-    padding:20px;
-    border-radius:10px;
-    background:#111;
+/* CONTENIDO MODAL */
+.contenido{
+    background: rgba(255,255,255,0.05);
+    border:1px solid rgba(255,165,0,0.3);
+    border-radius:15px;
+    padding:25px;
+    width:85%;
+    max-height:90%;
+    overflow:auto;
+    backdrop-filter: blur(15px);
+    box-shadow:0 0 25px rgba(255,165,0,0.3);
+    animation: slideUp 0.4s ease;
+}
+
+/* ENTRADA SUAVE */
+@keyframes slideUp{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
 }
 
 /* TITULOS */
@@ -71,17 +104,35 @@ h2{
     margin-bottom:10px;
 }
 
-/* IMAGENES */
-img{
-    width:100%;
-    margin:10px 0;
-    border-radius:10px;
-    border:2px solid orange;
+/* BOTÓN CERRAR */
+span{
+    float:right;
+    cursor:pointer;
+    font-size:22px;
+    color:orange;
+    transition:0.3s;
 }
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    border-top:2px solid orange;
+span:hover{
+    transform:scale(1.2);
+}
+
+/* IMÁGENES */
+img{
+    width:100%;
+    border-radius:12px;
+    margin:10px 0;
+    transition:0.3s;
+}
+
+/* EFECTO IMAGEN */
+img:hover{
+    transform:scale(1.04);
+    filter:brightness(1.2);
+}
+
+/* TEXTO */
+p{
+    line-height:1.6;
+    margin-bottom:10px;
 }
