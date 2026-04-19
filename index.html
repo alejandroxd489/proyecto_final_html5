@@ -2,112 +2,115 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Tampico Turismo</title>
-<link rel="stylesheet" href="css/styles.css">
+<title>Información Turística</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-    <h1>🌴 Descubre Tampico</h1>
-</header>
+<h1>🌎 Información Turística</h1>
 
-<main class="contenedor">
+<div class="contenedor">
 
-<!-- TARJETA 1 -->
-<div class="card">
-    <h2>Lugares Turísticos</h2>
-    <img src="img/lugar1.jpg">
-    <p>Explora los sitios más visitados de Tampico como playas y lagunas.</p>
-    <button onclick="abrir('modal1')">Ver más</button>
+    <div class="card" onclick="abrir('inicio')">
+        <img src="img/inicio.jpg">
+        <p>Inicio</p>
+    </div>
+
+    <div class="card" onclick="abrir('info')">
+        <img src="img/info.jpg">
+        <p>Información del lugar</p>
+    </div>
+
+    <div class="card" onclick="abrir('lugares')">
+        <img src="img/lugares.jpg">
+        <p>Lugares turísticos</p>
+    </div>
+
+    <div class="card" onclick="abrir('gastronomia')">
+        <img src="img/comida.jpg">
+        <p>Gastronomía / Cultura</p>
+    </div>
+
+    <div class="card" onclick="abrir('galeria')">
+        <img src="img/galeria.jpg">
+        <p>Galería</p>
+    </div>
+
+    <div class="card" onclick="abrir('conclusion')">
+        <img src="img/conclusion.jpg">
+        <p>Conclusión</p>
+    </div>
+
+    <div class="card" onclick="abrir('contacto')">
+        <img src="img/contacto.jpg">
+        <p>Contacto</p>
+    </div>
+
 </div>
-
-<!-- TARJETA 2 -->
-<div class="card">
-    <h2>Gastronomía</h2>
-    <img src="img/comida1.jpg">
-    <p>Disfruta de los mejores platillos típicos y mariscos frescos.</p>
-    <button onclick="abrir('modal2')">Ver más</button>
-</div>
-
-<!-- TARJETA 3 -->
-<div class="card">
-    <h2>Información</h2>
-    <img src="img/info1.jpg">
-    <p>Conoce más sobre la historia y cultura de la ciudad.</p>
-    <button onclick="abrir('modal3')">Ver más</button>
-</div>
-
-<!-- TARJETA 4 -->
-<div class="card">
-    <h2>Galería</h2>
-    <img src="img/g1.jpg">
-    <p>Imágenes que muestran la belleza del lugar.</p>
-    <button onclick="abrir('modal4')">Ver más</button>
-</div>
-
-<!-- TARJETA 5 -->
-<div class="card">
-    <h2>Conclusión</h2>
-    <img src="img/final1.jpg">
-    <p>Descubre por qué visitar Tampico es una gran experiencia.</p>
-    <button onclick="abrir('modal5')">Ver más</button>
-</div>
-
-</main>
 
 <!-- MODALES -->
 
-<div id="modal1" class="modal">
+<div id="inicio" class="modal">
 <div class="contenido">
-<span onclick="cerrar('modal1')">X</span>
-<h2>Lugares Turísticos</h2>
-<img src="img/lugar1.jpg">
-<img src="img/lugar2.jpg">
-<p>Tampico cuenta con Playa Miramar, Laguna del Carpintero y el centro histórico.</p>
+<span onclick="cerrar('inicio')">X</span>
+<h2>Inicio</h2>
+<p>Bienvenido a esta página turística donde conocerás lo mejor del lugar.</p>
 </div>
 </div>
 
-<div id="modal2" class="modal">
+<div id="info" class="modal">
 <div class="contenido">
-<span onclick="cerrar('modal2')">X</span>
-<h2>Gastronomía</h2>
-<img src="img/comida1.jpg">
-<img src="img/comida2.jpg">
-<p>Platillos típicos como ceviche, pescado y camarones frescos.</p>
+<span onclick="cerrar('info')">X</span>
+<h2>Información del lugar</h2>
+<p>Ubicación, clima, historia y datos importantes del destino.</p>
 </div>
 </div>
 
-<div id="modal3" class="modal">
+<div id="lugares" class="modal">
 <div class="contenido">
-<span onclick="cerrar('modal3')">X</span>
-<h2>Información</h2>
-<img src="img/info1.jpg">
-<img src="img/info2.jpg">
-<p>Tampico es una ciudad histórica con gran actividad portuaria.</p>
+<span onclick="cerrar('lugares')">X</span>
+<h2>Lugares turísticos</h2>
+<p>Playas, parques, centros históricos y sitios más visitados.</p>
 </div>
 </div>
 
-<div id="modal4" class="modal">
+<div id="gastronomia" class="modal">
 <div class="contenido">
-<span onclick="cerrar('modal4')">X</span>
+<span onclick="cerrar('gastronomia')">X</span>
+<h2>Gastronomía / Cultura</h2>
+<p>Comida típica, tradiciones y cultura del lugar.</p>
+</div>
+</div>
+
+<div id="galeria" class="modal">
+<div class="contenido">
+<span onclick="cerrar('galeria')">X</span>
 <h2>Galería</h2>
+<p>Aquí puedes mostrar varias imágenes del destino.</p>
 <img src="img/g1.jpg">
 <img src="img/g2.jpg">
-<img src="img/g3.jpg">
 </div>
 </div>
 
-<div id="modal5" class="modal">
+<div id="conclusion" class="modal">
 <div class="contenido">
-<span onclick="cerrar('modal5')">X</span>
+<span onclick="cerrar('conclusion')">X</span>
 <h2>Conclusión</h2>
-<img src="img/final1.jpg">
-<img src="img/final2.jpg">
-<p>Tampico es un destino ideal para disfrutar en familia y conocer la cultura mexicana.</p>
+<p>Un lugar ideal para visitar, relajarse y disfrutar.</p>
 </div>
 </div>
 
-<script src="js/app.js"></script>
+<div id="contacto" class="modal">
+<div class="contenido">
+<span onclick="cerrar('contacto')">X</span>
+<h2>Contacto</h2>
+<p>Email: ejemplo@gmail.com</p>
+<p>Teléfono: 123456789</p>
+</div>
+</div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
