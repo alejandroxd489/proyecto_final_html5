@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Tampico - Turismo</title>
+<title>Tampico Turismo</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -10,126 +10,78 @@
 
 <header>
     <h1>🌴 Tampico, Tamaulipas</h1>
-    <p>Un destino lleno de cultura, historia y belleza natural</p>
 </header>
 
+<!-- BOTONES -->
 <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#info">Información</a>
-    <a href="#lugares">Lugares</a>
-    <a href="#gastronomia">Gastronomía</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Conclusión</a>
+    <button onclick="abrir('inicio')">Inicio</button>
+    <button onclick="abrir('info')">Información</button>
+    <button onclick="abrir('lugares')">Lugares</button>
+    <button onclick="abrir('gastronomia')">Gastronomía</button>
+    <button onclick="abrir('galeria')">Galería</button>
+    <button onclick="abrir('contacto')">Conclusión</button>
 </nav>
 
-<main>
-
-<!-- INICIO -->
-<section id="inicio">
-<article>
+<!-- MODALES -->
+<div id="inicio" class="modal">
+<div class="contenido">
+<span onclick="cerrar('inicio')">X</span>
 <h2>Inicio</h2>
 <img src="img/tampico1.jpg">
 <img src="img/tampico2.jpg">
-<p>
-Tampico es una ciudad ubicada en el estado de Tamaulipas, reconocida por su historia,
-su arquitectura y su cercanía con el Golfo de México.
-</p>
-<p>
-Es un lugar ideal para el turismo gracias a sus playas, su cultura y su ambiente tranquilo.
-</p>
-</article>
-</section>
+<p>Tampico es un destino turístico con historia, cultura y playas.</p>
+</div>
+</div>
 
-<!-- INFORMACION -->
-<section id="info">
-<article>
-<h2>Información del lugar</h2>
+<div id="info" class="modal">
+<div class="contenido">
+<span onclick="cerrar('info')">X</span>
+<h2>Información</h2>
 <img src="img/info1.jpg">
 <img src="img/info2.jpg">
-<p>
-Tampico cuenta con una rica historia influenciada por diversas culturas.
-</p>
-<p>
-Su clima es cálido y húmedo, ideal para actividades al aire libre.
-</p>
-<p>
-Es una ciudad importante en la economía del país debido a su actividad portuaria.
-</p>
-</article>
-</section>
+<p>Ciudad importante por su puerto y su clima cálido.</p>
+</div>
+</div>
 
-<!-- LUGARES -->
-<section id="lugares">
-<article>
+<div id="lugares" class="modal">
+<div class="contenido">
+<span onclick="cerrar('lugares')">X</span>
 <h2>Lugares turísticos</h2>
 <img src="img/lugar1.jpg">
 <img src="img/lugar2.jpg">
-<p>
-Entre los principales atractivos se encuentran:
-</p>
-<ul>
-<li>Playa Miramar</li>
-<li>Laguna del Carpintero</li>
-<li>Centro Histórico</li>
-</ul>
-<p>
-Estos lugares ofrecen actividades recreativas y vistas impresionantes.
-</p>
-</article>
-</section>
+<p>Playa Miramar, Laguna del Carpintero y Centro Histórico.</p>
+</div>
+</div>
 
-<!-- GASTRONOMIA -->
-<section id="gastronomia">
-<article>
+<div id="gastronomia" class="modal">
+<div class="contenido">
+<span onclick="cerrar('gastronomia')">X</span>
 <h2>Gastronomía</h2>
 <img src="img/comida1.jpg">
 <img src="img/comida2.jpg">
-<p>
-La gastronomía de Tampico destaca por sus mariscos frescos.
-</p>
-<p>
-Platillos como ceviche, camarones y pescado son muy populares.
-</p>
-<p>
-También hay una gran variedad de comida tradicional mexicana.
-</p>
-</article>
-</section>
+<p>Mariscos frescos, ceviche y comida tradicional.</p>
+</div>
+</div>
 
-<!-- GALERIA -->
-<section id="galeria">
-<article>
+<div id="galeria" class="modal">
+<div class="contenido">
+<span onclick="cerrar('galeria')">X</span>
 <h2>Galería</h2>
 <img src="img/g1.jpg">
 <img src="img/g2.jpg">
 <img src="img/g3.jpg">
-<img src="img/g4.jpg">
-<p>
-Tampico ofrece paisajes hermosos tanto de día como de noche.
-</p>
-</article>
-</section>
+</div>
+</div>
 
-<!-- CONCLUSION -->
-<section id="contacto">
-<article>
+<div id="contacto" class="modal">
+<div class="contenido">
+<span onclick="cerrar('contacto')">X</span>
 <h2>Conclusión</h2>
 <img src="img/final1.jpg">
 <img src="img/final2.jpg">
-<p>
-Tampico es un destino turístico que combina historia, cultura y naturaleza.
-</p>
-<p>
-Es un lugar ideal para visitar y disfrutar en familia.
-</p>
-</article>
-</section>
-
-</main>
-
-<footer>
-<p>Proyecto Final HTML5 - Axel Alejandro</p>
-</footer>
+<p>Tampico es un excelente lugar para visitar.</p>
+</div>
+</div>
 
 <script src="js/app.js"></script>
 </body>
