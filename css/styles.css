@@ -1,4 +1,3 @@
-/* RESET */
 *{
     margin:0;
     padding:0;
@@ -6,52 +5,68 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* FONDO GRADIENTE */
+/* FONDO */
 body{
-    background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #000);
+    background: linear-gradient(to right, #00c6ff, #0072ff);
     color:white;
-    text-align:center;
 }
 
 /* HEADER */
 header{
+    text-align:center;
     padding:30px;
-    font-size:22px;
-    letter-spacing:2px;
+    font-size:25px;
+    font-weight:bold;
 }
 
-/* NAV BOTONES */
-nav{
+/* CONTENEDOR */
+.contenedor{
     display:flex;
-    justify-content:center;
     flex-wrap:wrap;
-    gap:10px;
+    justify-content:center;
+    gap:20px;
     padding:20px;
 }
 
-/* BOTONES NUEVOS */
-button{
-    padding:12px 18px;
-    border:none;
-    border-radius:12px;
-    background: rgba(255,165,0,0.1);
-    color:orange;
-    font-weight:bold;
-    backdrop-filter: blur(10px);
-    border:1px solid rgba(255,165,0,0.4);
-    cursor:pointer;
+/* TARJETAS */
+.card{
+    background:white;
+    color:black;
+    width:280px;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    text-align:center;
     transition:0.3s;
 }
 
-/* HOVER PRO */
-button:hover{
-    background:orange;
-    color:black;
-    box-shadow:0 0 20px orange;
-    transform:translateY(-2px) scale(1.05);
+.card:hover{
+    transform:translateY(-10px);
 }
 
-/* MODAL (FONDO) */
+/* IMÁGENES */
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin:10px 0;
+}
+
+/* BOTÓN */
+button{
+    background:#0072ff;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#00c6ff;
+}
+
+/* MODAL */
 .modal{
     display:none;
     position:fixed;
@@ -59,80 +74,25 @@ button:hover{
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.85);
-    backdrop-filter: blur(5px);
+    background:rgba(0,0,0,0.8);
     justify-content:center;
     align-items:center;
-    animation: fadeIn 0.4s;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
 }
 
 /* CONTENIDO MODAL */
 .contenido{
-    background: rgba(255,255,255,0.05);
-    border:1px solid rgba(255,165,0,0.3);
+    background:white;
+    color:black;
+    padding:20px;
     border-radius:15px;
-    padding:25px;
-    width:85%;
+    width:80%;
     max-height:90%;
     overflow:auto;
-    backdrop-filter: blur(15px);
-    box-shadow:0 0 25px rgba(255,165,0,0.3);
-    animation: slideUp 0.4s ease;
 }
 
-/* ENTRADA SUAVE */
-@keyframes slideUp{
-    from{
-        transform:translateY(50px);
-        opacity:0;
-    }
-    to{
-        transform:translateY(0);
-        opacity:1;
-    }
-}
-
-/* TITULOS */
-h2{
-    color:orange;
-    margin-bottom:10px;
-}
-
-/* BOTÓN CERRAR */
+/* CERRAR */
 span{
     float:right;
     cursor:pointer;
-    font-size:22px;
-    color:orange;
-    transition:0.3s;
-}
-
-span:hover{
-    transform:scale(1.2);
-}
-
-/* IMÁGENES */
-img{
-    width:100%;
-    border-radius:12px;
-    margin:10px 0;
-    transition:0.3s;
-}
-
-/* EFECTO IMAGEN */
-img:hover{
-    transform:scale(1.04);
-    filter:brightness(1.2);
-}
-
-/* TEXTO */
-p{
-    line-height:1.6;
-    margin-bottom:10px;
+    font-size:20px;
 }
